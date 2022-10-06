@@ -11,7 +11,14 @@ function genStr(str, values) {
   return executor;
 }
 
+const builder = stringBuilder
+
 const rsStringBuilder = (str, values) => {
-  return stringBuilder(str, values);
+  return builder(str, values);
 };
-Deno.core.print(genStr(STR, VALUES).exec(rsStringBuilder))
+
+const start = new Date().getTime();
+
+genStr(STR, VALUES).exec(rsStringBuilder);
+
+Deno.core.print((new Date().getTime()-start).toString()+"\n");

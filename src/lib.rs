@@ -8,7 +8,7 @@ use deno_core::{
     serde::de::DeserializeOwned,
     serde_v8, v8, JsRuntime, FsModuleLoader, error::AnyError,
 };
-use deno_runtime::{worker::WorkerOptions, BootstrapOptions, deno_web::BlobStore, deno_broadcast_channel::{BroadcastChannel, InMemoryBroadcastChannel}, ops::io::Stdio};
+use deno_runtime::{worker::WorkerOptions, BootstrapOptions, deno_web::BlobStore, deno_broadcast_channel::InMemoryBroadcastChannel, ops::io::Stdio};
 
 pub async fn eval<T>(rt: &mut JsRuntime, code: &str) -> Result<T>
 where

@@ -10,7 +10,6 @@ use deno_core::{
 
 #[op]
 fn op_string_builder(str: String, args: Vec<String>) -> String {
-    print!("x");
     let res = str + &args.join("");
     res
 }
