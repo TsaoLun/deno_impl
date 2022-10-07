@@ -1,17 +1,11 @@
 use deno_core::{
     op, Extension,
     include_js_files
-    //serde::Serialize
 };
-
-// #[derive(Serialize)]
-// pub struct Res (String);
-
 
 #[op]
 fn op_string_builder(str: String, args: Vec<String>) -> String {
-    let res = str + &args.join("");
-    res
+    str + &args.join("")
 }
 
 pub fn init() -> Extension {

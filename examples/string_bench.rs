@@ -1,7 +1,7 @@
 use std::rc::Rc;
 
-use deno_core::{anyhow::Result, JsRuntime, RuntimeOptions, FsModuleLoader};
-use deno_impl::{ops::string_bulder, execute_main_module};
+use deno_core::{anyhow::Result, FsModuleLoader, JsRuntime, RuntimeOptions};
+use deno_impl::{execute_main_module, ops::string_bulder};
 
 #[tokio::main]
 async fn main() -> Result<()> {
